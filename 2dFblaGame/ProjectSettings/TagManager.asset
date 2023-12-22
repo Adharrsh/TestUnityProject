@@ -44,6 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 960090367
     locked: 0
+  - name: BuildingAndShiii
+    uniqueID: 1323578799
+    locked: 0
+  - name: BordersAndShii
+    uniqueID: 3228352059
+    locked: 0
   - name: Player
     uniqueID: 3902479495
     locked: 0

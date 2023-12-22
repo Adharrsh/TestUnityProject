@@ -24,9 +24,24 @@ public class PlayerController : MonoBehaviour
     {
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-
+            input.x = 0;
+            input.y = 0;
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
+                input.y += 1;
+            }
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            {
+                input.y -= 1;
+            }
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            {
+                input.x += 1;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                input.x -= 1;
+            }
             if (input.x != 0)
             {
                 input.y = 0;
