@@ -6,7 +6,8 @@ interface IInteractable
 {
     public void Interact();
 }
-public class Interacter : MonoBehaviour
+
+public class Interactor : MonoBehaviour
 {
     public Transform InteractorSource;
     public float InteractRange;
