@@ -8,41 +8,43 @@ public class MainBuilding : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     [SerializeField] private string newLevel;
-    [SerializeField] private GameObject uiElement;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (isInRange)
+        {
+            if (Input.GetKeyDown(interactKey))
+            {
+                Debug.Log("Hello");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            uiElement.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                SceneManager.LoadScene(newLevel);
-            }
+            
+            isInRange = true;
+            Debug.Log("Player is in range with M");
+
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-            
-    }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            uiElement.SetActive(false);
+            
+            isInRange = false;
+            Debug.Log("Player is not in range with M");
         }
     }
 }

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInRange: 0
   interactKey: 101
+  newLevel: 
+  uiElement: {fileID: 7204456724067062056}
 --- !u!61 &70952921506776310
 BoxCollider2D:
   m_ObjectHideFlags: 0

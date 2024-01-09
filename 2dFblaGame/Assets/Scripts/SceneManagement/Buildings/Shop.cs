@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Shop : MonoBehaviour
 {
     public bool isInRange;
     public KeyCode interactKey;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,13 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isInRange)
+        {
+            if (Input.GetKeyDown(interactKey))
+            {
+                Debug.Log("Hello");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
