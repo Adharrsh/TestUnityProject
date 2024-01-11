@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ShowInteract : MonoBehaviour
 {
-    [SerializeField] private GameObject uiElement;
+    
     [SerializeField] private GameObject EInteract;
     // Start is called before the first frame update
     void Start()
     {
-        uiElement.SetActive(false);
+        
         EInteract.SetActive(false);
     }
-
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +26,7 @@ public class ShowInteract : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiElement.SetActive(true);
+            
             EInteract.SetActive(true);
         }
     }
@@ -32,7 +35,6 @@ public class ShowInteract : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiElement.SetActive(false);
             EInteract.SetActive(false);
         }
     }

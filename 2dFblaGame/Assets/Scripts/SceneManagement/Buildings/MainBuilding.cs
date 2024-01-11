@@ -24,6 +24,7 @@ public class MainBuilding : MonoBehaviour
             if (Input.GetKeyDown(interactKey))
             {
                 Debug.Log("Hello");
+                SceneManager.LoadScene(1);
             }
         }
     }
