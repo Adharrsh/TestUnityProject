@@ -11,10 +11,7 @@ public class FrontDesk : MonoBehaviour
     {
         Debug.Log("This is new scene");
     }
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+    
     // Update is called once per frame
     void Update()
     {

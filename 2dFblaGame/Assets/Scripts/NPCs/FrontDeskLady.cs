@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-
-public class Dialogue : MonoBehaviour
+public class FrontDeskLady : MonoBehaviour
 {
+    [SerializeField] Dialogue dialogue;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,8 @@ public class Dialogue : MonoBehaviour
         
     }
 
-    [SerializeField] List<string> lines;
-
-    public List<string> Lines
+    public void Interact()
     {
-        get { return lines; }
+        DialogueManager.Instance.ShowDialogue(dialogue);
     }
 }
